@@ -1,20 +1,102 @@
-// HarderChallenges.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 #include <iostream>
 
+using namespace std;
+
 int main()
 {
-    std::cout << "Hello World!\n";
+	/*string fullName;
+	cout << "Type your full name: ";
+	getline (cin, fullName);
+	cout << "Your name is: " << fullName; */
+
+    int x = 5, y = 8;
+    double z = 25.0;
+    double w = 6.78;
+
+   
+    std::cout << "Max of " << x << " and " << y << " is: " << std::max(x, y) << std::endl;
+    std::cout << "Square root of " << z << " is: " << std::sqrt(z) << std::endl;
+    std::cout << "Rounded value of " << w << " is: " << std::round(w) << std::endl;
+    double base = 2.0, exponent = 3.0;
+    std::cout << base << " raised to the power of " << exponent << " is: " << std::pow(base, exponent) << std::endl;
+
+    if (x > y) {
+        std::cout << "x is greater than y." << std::endl;
+    }
+    else {
+        std::cout << "y is greater than or equal to x." << std::endl;
+    }
+
+    if (w < 0) {
+        std::cout << "w is negative." << std::endl;
+    }
+    else if (w > 0) {
+        std::cout << "w is positive." << std::endl;
+    }
+    else {
+        std::cout << "w is zero." << std::endl;
+    }
+
+    int option = 2;
+    switch (option) {
+    case 1:
+        std::cout << "Option 1 selected." << std::endl;
+        break;
+    case 2:
+        std::cout << "Option 2 selected." << std::endl;
+        break;
+    case 3:
+        std::cout << "Option 3 selected." << std::endl;
+        break;
+    default:
+        std::cout << "Invalid option." << std::endl;
+    }
+
+    int number = 7;
+    std::cout << "The number is " << (number % 2 == 0 ? "even" : "odd") << std::endl;
+    
+    int count = 0;
+   /* while (count < 5) {
+        std::cout << "Count: " << count << std::endl;
+        count++;
+    }*/
+    
+    do {
+        std::cout << "Count: " << count << std::endl;
+        count++;
+    } while (count < 10);
+
+    for (int count = 0; count < 5; count++) {
+        std::cout << "Count: " << count << std::endl;
+    }  
+    
+    int count2 = 0;
+    while (count2 < 10) {
+        std::cout << "Count: " << count2 << std::endl;
+        if (count2 % 2 == 0) {
+            count2++;
+            continue;
+        }
+        if (count2 == 7) {
+            break;
+        }
+        count2++;
+    }
+
+    int numbers[] = { 10, 20, 30, 40, 50 };
+    std::cout << "Element at index 2: " << numbers[2] << std::endl;
+
+    for (int i = 0; i < 5; ++i) {
+        std::cout << "Element at index " << i << ": " << numbers[i] << std::endl;
+    }
+
+    string food = "Pizza";
+    string& meal = food;
+
+    cout << food << "\n";
+    cout << meal << "\n";
+
+    return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
